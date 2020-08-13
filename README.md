@@ -31,6 +31,7 @@ An application to check the information of your system (architecture, memory, de
 ## Author Credits
 
 Youtube Channel: Traversy Media
+
 Video Link: [https://www.youtube.com/watch?time_continue=231&v=mr9Mtm_TRpw&feature=emb_logo]
 
 ---
