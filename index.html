@@ -9,29 +9,52 @@
 </head>
 <body>
     <div class = "container">
-        <h1><strong></strong>System Monitor</strong></h1>
+        <h1 id ="mainTitle"><strong></strong>System Monitor</strong></h1>
         <div id = "output"></div>
     </div>
 </body>
     <script>
     console.log(process);
     let output = `
-    
-        <h2 class ="main"> Computer Name:  ${process.env.COMPUTERNAME}</h1>
-        
-        <h2 class = "header-main"> Version Data</h2>
-        <ul class = "list-group">
-            <li class = "list-group-item"> Node: ${process.versions.node}</li>
-            <li class = "list-group-item"> Chrome: ${process.versions.chrome}</li>
-            <li class = "list-group-item"> Electron: ${process.versions.electron}</li>
-        </ul>
+        <div class = "mainContainer">
+            <div class = "subContainer">
+                <div class = "imgHolder">
+                    <img id = "pc" src = "./assets/images/Comp.png">
+                </div>
+                <h2 class ="header-main"> Computer Name</h2>
+                    <ul class = "list-group">
+                        <li class = "list-group-item"> ${process.env.COMPUTERNAME}</li>  
+                    </ul>
+            </div>
 
-        <h2 class = "header-main"> System Specs</h2>
-        <ul class = "list-group">
-            <li class = "list-group-item"> System Architecture: ${process.arch}</li>
-            <li class = "list-group-item"> Process Identifier: ${process.env.PROCESSOR_IDENTIFIER}</li>
-            <li class = "list-group-item"> Printer : ${process.env.PRINTER}</li>
-        </ul>
+            <div class = "subContainer">
+
+                <div class = "imgHolder">
+                    <img src = "./assets/images/version.png">
+                </div>
+                <h2 class = "header-main"> Version Data</h2>
+                    <ul class = "list-group">
+                        <li class = "list-group-item"> Node: ${process.versions.node}</li>
+                        <li class = "list-group-item"> Chrome: ${process.versions.chrome}</li>
+                        <li class = "list-group-item"> Electron: ${process.versions.electron}</li>
+                    </ul>
+                </div>
+
+                
+            <div class = "subContainer">
+                <div class = "imgHolder">
+                    <img src = "./assets/images/specs.png">
+                </div>
+                <h2 class = "header-main"> System Specs</h2>
+                    <ul class = "list-group">
+                        <li class = "list-group-item"> System Architecture: ${process.arch}</li>
+                        <li class = "list-group-item"> Process Identifier: ${process.env.PROCESSOR_IDENTIFIER}</li>
+                        <li class = "list-group-item"> Printer : ${process.env.PRINTER}</li>
+                    </ul>
+                </div>      
+
+        </div>
+       
     `
 
     document.getElementById('output').innerHTML = output;
